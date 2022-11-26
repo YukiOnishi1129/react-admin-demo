@@ -1,6 +1,6 @@
-import { Admin, Resource, ListGuesser } from 'react-admin'
-import { FC } from 'react'
 import jsonServerProvider from 'ra-data-json-server'
+import { FC } from 'react'
+import { Admin, Resource, ListGuesser } from 'react-admin'
 
 const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com')
 

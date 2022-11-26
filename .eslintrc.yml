@@ -23,6 +23,7 @@ plugins:
   - react
   - react-hooks
   - '@typescript-eslint'
+  - unused-imports
 rules:
   react-hooks/rules-of-hooks: error
   react-hooks/exhaustive-deps: warn
@@ -31,3 +32,25 @@ rules:
   semi:
     - error
     - never
+  import/order:
+    [
+      'error',
+      {
+        'groups':
+          [
+            'builtin',
+            'external',
+            'internal',
+            'parent',
+            'sibling',
+            'index',
+            'object',
+            'type'
+          ],
+        'newlines-between': 'always',
+        'pathGroupsExcludedImportTypes': ['builtin'],
+        'alphabetize': { 'order': 'asc', 'caseInsensitive': true },
+        'pathGroups': []
+      }
+    ]
+  unused-imports/no-unused-imports: error
